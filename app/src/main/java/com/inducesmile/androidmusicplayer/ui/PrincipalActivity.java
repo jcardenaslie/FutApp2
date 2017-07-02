@@ -27,11 +27,9 @@ import com.inducesmile.androidmusicplayer.model.GlobalData;
 public class PrincipalActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private static final String TAG = PrincipalActivity.class.getSimpleName();
-
     private FragmentManager fragmentManager;
     private Fragment fragment = null;
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +37,7 @@ public class PrincipalActivity extends AppCompatActivity implements NavigationVi
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        String welcomeMsg = ((GlobalData)getApplication()).getNombre() +" "+ ((GlobalData)getApplication()).getApellido();
+        String welcomeMsg = "Bienvenido "+((GlobalData)getApplication()).getNombre() +" "+ ((GlobalData)getApplication()).getApellido()+"!";
         Toast.makeText(PrincipalActivity.this,welcomeMsg, Toast.LENGTH_SHORT).show();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -58,8 +56,6 @@ public class PrincipalActivity extends AppCompatActivity implements NavigationVi
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         View header = navigationView.inflateHeaderView(R.layout.nav_header_principal);
-        //TextView profileName = (TextView) header.findViewById(R.id.profile_name);
-        //profileName.setText("Adele");
 
         navigationView.setNavigationItemSelectedListener(this);
     }
@@ -82,23 +78,16 @@ public class PrincipalActivity extends AppCompatActivity implements NavigationVi
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
 
+        int id = item.getItemId();
         if (id == R.id.nav_mis_equipos) {
             startActivity(new Intent(getBaseContext(), MisEquiposActivity.class));
         } else if (id == R.id.nav_administrar_campeonatos) {
@@ -112,7 +101,6 @@ public class PrincipalActivity extends AppCompatActivity implements NavigationVi
         } else if (id == R.id.nav_send) {
             Toast.makeText(this,"No Implementado", Toast.LENGTH_SHORT).show();
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

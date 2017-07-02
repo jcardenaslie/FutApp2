@@ -65,7 +65,6 @@ public class MyHttpConnect {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            BufferedWriter bufferedWriter = null;
 
         OutputStreamWriter outputStreamWriter = null;
         try {
@@ -77,6 +76,7 @@ public class MyHttpConnect {
 
         }
 
+        BufferedWriter bufferedWriter = null;
         try {
             bufferedWriter = new BufferedWriter(outputStreamWriter);
         } catch (Exception e) {

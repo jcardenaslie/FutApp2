@@ -154,7 +154,7 @@ public class CampeonatosFragment extends Fragment {
                         "cupos_max",
                         "estilo"
                 }, new int[]{
-                        R.id.txtNombrePartido,
+                        R.id.txtCampeonatoNombre,
                         R.id.txtCampeonatoEdicion,
                         R.id.txtCampeonatoFecha,
                         R.id.txtCuposInscritos,
