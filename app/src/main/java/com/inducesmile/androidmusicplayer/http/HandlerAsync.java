@@ -56,6 +56,9 @@ public class HandlerAsync extends AsyncTask< HashMap<String,String>, Void, Strin
     @Override
     protected void onPostExecute(final String result) {
         Log.v("SERVER_RESPONSE",result);
+        if(result.equals("")){
+            Toast.makeText(ctx, "Problemas con la conexion al servido", Toast.LENGTH_LONG).show();
+        }
         try {
             JSONObject jsonObj = new JSONObject(result);
             if( jsonObj.has("message")){

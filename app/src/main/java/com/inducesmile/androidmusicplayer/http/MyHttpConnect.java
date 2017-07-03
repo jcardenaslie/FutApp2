@@ -1,6 +1,7 @@
 package com.inducesmile.androidmusicplayer.http;
 
 import android.util.Log;
+import android.widget.Toast;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -38,6 +39,10 @@ public class MyHttpConnect {
         String response ="There was an error";
             URL url = null;
             boolean testConnection= false;
+
+//        if(!isConnectedToServer(connectionUrl)){
+//            return "";
+//        }
             try {
                 url = new URL(connectionUrl);
                 testConnection =isConnectedToServer(connectionUrl);
