@@ -7,7 +7,7 @@ import android.app.Application;
  */
 public class GlobalData extends Application {
 
-    private String baseUrl="http://10.0.2.2";
+    private String baseUrl="http://45.55.236.102";
     private String usuario = "n";
     private String correo = "n@gmail.com";
     private String nombre = "n";
