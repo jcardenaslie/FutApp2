@@ -24,7 +24,6 @@ public class RegisterActivity extends AppCompatActivity {
 
     private static String urlItinerariosAdd;
     private String urlMethod = "POST";
-    //private static String urlItinerariosAdd = "http://isw2.tk/isw2Api/v1/lugares_turisticos";
     private ProgressDialog pDialog;
     ArrayList<HashMap<String, String>> listaItinerarios;
 
