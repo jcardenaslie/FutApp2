@@ -26,9 +26,9 @@ import java.util.HashMap;
 public class CrearEquipoActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
 
     private static final String TAG = MyHttpConnect.class.getSimpleName();
-    private String urlInsertarJugadorEquipo = "http://10.0.2.2/px/futappApi/v1/insertar_jugador";
-    private String urlGetJugadores = "http://10.0.2.2/px/futappApi/v1/jugadores";
-    private String urlCrearEquipo = "http://10.0.2.2/px/futappApi/v1/crear_equipo";
+    private String urlInsertarJugadorEquipo = "http://45.55.236.102/px/futappApi/v1/insertar_jugador";
+    private String urlGetJugadores = "http://45.55.236.102/px/futappApi/v1/jugadores";
+    private String urlCrearEquipo = "http://45.55.236.102/px/futappApi/v1/crear_equipo";
     private String urlMethod = "POST";
 
 
